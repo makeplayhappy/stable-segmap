@@ -10,7 +10,7 @@ namespace GILES.Serialization
 
         public pb_InspectorNameAttribute(string name)
         {
-            this.name = name;
+            this.name = name + " ina";
         }
     }
 }

@@ -11,20 +11,26 @@ namespace GILES.Interface
 	public class pb_TransformEditor : pb_ComponentEditor
 	{
 		private Transform _transform;
+		private MeshRenderer _renderer;
 
 		protected override void InitializeGUI()
 		{
 			pb_GUIUtility.AddVerticalLayoutGroup(gameObject);
 
 			_transform = (Transform) target;
+			_renderer = _transform.gameObject.GetComponent<MeshRenderer>();
 
 		    pb_TypeInspector position_inspector = pb_InspectorResolver.GetInspector(typeof(Vector3));
 			pb_TypeInspector rotation_inspector = pb_InspectorResolver.GetInspector(typeof(Vector3));
 			pb_TypeInspector scale_inspector 	= pb_InspectorResolver.GetInspector(typeof(Vector3));
 
+			pb_TypeInspector material_inspector 	= pb_InspectorResolver.GetInspector(typeof(Material));
+
 			position_inspector.Initialize("Position", UpdatePosition, OnSetPosition);
 			rotation_inspector.Initialize("Rotation", UpdateRotation, OnSetRotation);
 			scale_inspector.Initialize("Scale", UpdateScale, OnSetScale);
+
+			
 
 			position_inspector.onValueBeginChange = () => { Undo.RegisterState( new UndoTransform(_transform), "Set Position: " + _transform.position.ToString("G") ); };
 			rotation_inspector.onValueBeginChange = () => { Undo.RegisterState( new UndoTransform(_transform), "Set Rotation: " + _transform.localRotation.eulerAngles.ToString("G")); };
@@ -33,6 +39,20 @@ namespace GILES.Interface
 			position_inspector.transform.SetParent(transform);
 			rotation_inspector.transform.SetParent(transform);
 			scale_inspector.transform.SetParent(transform);
+
+
+			if( _renderer != null){
+				Debug.Log("Initialising Material Inspector");
+				material_inspector.Initialize("Material", UpdateMaterial, OnSetMaterial);
+				//material_inspector.onValueBeginChange = () => { Undo.RegisterState( new UndoTransform(_transform), "Set Scale: " + _transform.localScale.ToString("G") ); };
+				material_inspector.transform.SetParent(transform);
+
+
+			}else{
+				Debug.Log("No mesh filter on " + target.name);
+			}
+
+
 		}
 
 		void Update()
@@ -83,5 +103,17 @@ namespace GILES.Interface
 			_transform.localScale = (Vector3) value;
 			pb_Selection.OnExternalUpdate();
 		}
+
+		object UpdateMaterial(int index)
+		{
+			return _renderer.material;
+		}
+
+		void OnSetMaterial(int index, object value)
+		{
+			_renderer.material = (Material) value;
+			pb_Selection.OnExternalUpdate();
+		}
+
 	}
 }

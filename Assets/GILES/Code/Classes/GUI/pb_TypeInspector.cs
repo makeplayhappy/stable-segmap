@@ -142,7 +142,7 @@ namespace GILES.Interface
 
 		private void Initialize_INTERNAL()
 		{
-            gameObject.name = GetName();
+            gameObject.name = GetName() + " Insp";
 
 			InitializeGUI();
             if (useDefaultSkin) {

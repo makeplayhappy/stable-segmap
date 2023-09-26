@@ -57,11 +57,13 @@ namespace GILES.Interface
 
 			foreach(PropertyInfo prop in pb_Reflection.GetSerializableProperties(declaringType, BindingFlags.Public | BindingFlags.Instance))
 			{
+				Debug.Log("Adding inspector for prop " );
 				pb_InspectorResolver.AddTypeInspector(value, subpanel.transform, prop, null).parent = this;
 			}
 
 			foreach(FieldInfo field in pb_Reflection.GetSerializableFields(declaringType, BindingFlags.Public | BindingFlags.Instance))
 			{
+				Debug.Log("Adding inspector for field " );
 				pb_InspectorResolver.AddTypeInspector(value, subpanel.transform, null, field).parent = this;
 			}
 		}
