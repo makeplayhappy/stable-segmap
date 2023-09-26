@@ -1,8 +1,14 @@
-# giles 2020
+# Giles 2022 LTS
+
+This is a modified version of Giles with the aim of publishing a web runtime editor for building 3d segmentations for controlnet. Eventually depth maps and possibly normal maps if anyone want to add that in!
+ 
+![segmentation-colors-for-controlnet](docs/color150-segmentation-colors-for-controlnet-v0.webp)
+
 
 ### A Runtime Level Editor for Unity3D
 
 ![giles](giles.png)
+
 
 ## What is it?
 
@@ -22,7 +28,7 @@ Out of the box here's what GILES provides:
 
 ## Quick Start
 
-- Install **Unity 2019.2** or greater.
+- Install **Unity 2022.3.5** or greater.
 - In Player Settings, set "API Compatibility Level" to ".NET 4.0"
 - Open **GILES** project.
 - Open *GILES/Example/Level Editor*
