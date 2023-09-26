@@ -28,7 +28,9 @@ namespace GILES.Interface
             {
                 GameObject go = previewComponent.gameObject;
                 GameObject child = go.AddChild();
+                child.name = "Item Folder";
                 Text text = child.AddComponent<Text>();
+                text.maskable = false;
                 text.font = pb_GUIUtility.DefaultFont();
                 text.alignment = TextAnchor.LowerCenter;
                 text.text = asset.name;

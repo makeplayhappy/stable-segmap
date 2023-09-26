@@ -26,7 +26,7 @@ namespace GILES.Interface
 		 */
 		public static void SetTitle(string title)
 		{
-			instance.windowTitle.text = title;
+			instance.windowTitle.text = title + " win";
 		}
 
 		public static void Show()

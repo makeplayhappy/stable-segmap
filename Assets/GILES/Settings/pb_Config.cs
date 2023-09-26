@@ -61,7 +61,7 @@ namespace GILES
 			typeof(UnityEngine.TrailRenderer),
 			typeof(UnityEngine.LineRenderer),
 			typeof(UnityEngine.MeshRenderer),
-#if !UNITY_2019_4
+#if !UNITY_2019_4_OR_NEWER
       		        typeof(UnityEngine.GUIElement),
 #endif
 			typeof(UnityEngine.UI.Image),

@@ -148,7 +148,7 @@ namespace GILES.Interface
 
 			if(children != null)
 			{
-				directoryCrumbsField.text = currentDirectory;
+				directoryCrumbsField.text = currentDirectory + " dir";
 
 				for(int n = 0; n < children.Length; n++)
 				{

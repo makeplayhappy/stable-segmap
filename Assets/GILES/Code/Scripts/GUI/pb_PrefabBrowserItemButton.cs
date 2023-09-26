@@ -121,22 +121,25 @@ namespace GILES.Interface
 				previewImage = null;
 			}
 
-			gameObject.AddComponent<Mask>();
+			//gameObject.AddComponent<Mask>();
 			gameObject.AddComponent<VerticalLayoutGroup>();
 			Image image = gameObject.DemandComponent<Image>();
 			image.color = pb_GUIUtility.ITEM_BACKGROUND_COLOR;
 			image.sprite = null;
 
 			GameObject description = gameObject.AddChild();
+			description.name = "Item Button";
 
 			if(previewImage != null)
 			{
 				previewComponent = description.AddComponent<RawImage>();
 				previewComponent.texture = previewImage;
+				previewComponent.maskable = false;
 			}
 			else
 			{
 				Text text = description.AddComponent<Text>();
+				text.maskable = false;
 				text.font = pb_GUIUtility.DefaultFont();
 				text.alignment = TextAnchor.MiddleCenter;
 				text.text = asset.name;

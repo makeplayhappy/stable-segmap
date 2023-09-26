@@ -40,7 +40,8 @@ namespace GILES.Interface
 		public static Font DefaultFont()
 		{
 			if(_defaultFont == null)
-				_defaultFont = (Font) Resources.GetBuiltinResource(typeof(Font), "Arial.ttf");
+				//_defaultFont = (Font) Resources.GetBuiltinResource(typeof(Font), "Inter.ttf");
+				_defaultFont = Resources.Load<Font>("Required/Font/Inter/Inter-Regular");
 
 			return _defaultFont;
 		}
@@ -93,6 +94,7 @@ namespace GILES.Interface
 			GameObject go = new GameObject();
 			go.name = "Label Field";
 			Text field = go.AddComponent<Text>();
+			field.maskable = false;
 			string temp = text.Replace("UnityEngine.","");
 			field.text = temp; //This removes the UnityEngine. Prefix from the Inspector.
 			//field.text = text;

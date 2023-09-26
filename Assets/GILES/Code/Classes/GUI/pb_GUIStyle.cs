@@ -39,7 +39,8 @@ namespace GILES.Interface
 		{
 			get
 			{
-				return _font == null ? (Font) Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") : _font;
+				//return _font == null ? (Font) Resources.GetBuiltinResource(typeof(Font), "Inter.ttf") : _font;
+				return _font == null ? (Font) Resources.Load<Font>("Required/Font/Inter/Inter-Regular") : _font;
 			}
 
 			set { _font = value; }

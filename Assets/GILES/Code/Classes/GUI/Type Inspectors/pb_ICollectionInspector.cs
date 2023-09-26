@@ -27,7 +27,7 @@ namespace GILES.Interface
 
 		public override void InitializeGUI()
 		{
-			title.text = GetName().SplitCamelCase();
+			title.text = GetName().SplitCamelCase() + " col";
 			
 			value = GetValue<ICollection>();
 

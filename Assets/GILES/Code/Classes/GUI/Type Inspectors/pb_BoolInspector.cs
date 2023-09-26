@@ -17,7 +17,7 @@ namespace GILES.Interface
 
 		public override void InitializeGUI()
 		{
-			title.text = GetName().SplitCamelCase();
+			title.text = GetName().SplitCamelCase() + " bool";
 			input.onValueChanged.AddListener( OnValueChange );
 		}
 			
