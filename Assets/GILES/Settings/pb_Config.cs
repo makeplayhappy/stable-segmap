@@ -24,7 +24,7 @@ namespace GILES
 		 */
         public static readonly string[] Resource_Folder_Paths = new string[]
 		{
-			"Level Editor Prefabs"
+			"LevelEditorPrefabs"
 		};
 
 		/**

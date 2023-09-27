@@ -15,7 +15,11 @@ namespace GILES
 		public void Snapshot()
         {
             //pb_SceneLoader.LoadScene(pb_Scene.SaveLevel(), true);
-            StartCoroutine( GrabPNG() );
+            if( WebGLFileSaver.IsSavingSupported() ){
+                StartCoroutine( GrabPNG() );
+            }else{
+                Debug.Log("Snapshot saving is not available");
+            }
         }
 
 
@@ -34,11 +38,9 @@ namespace GILES
             file = ImageConversion.EncodeToPNG(tex);
             Destroy(tex);
 
-            //DownloadFile(file, file.Length, "segmentation.png");
+            WebGLFileSaver.SaveFile(file, "segmentation.png", "image/png");
 
         }
 
-        //[DllImport("__Internal")]
-        //private static extern void DownloadFile(byte[] array, int byteLength, string fileName);
 	}
 }

@@ -1,0 +1,3 @@
+[submodule "Assets/WebGLFile"]
+	path = Assets/WebGLFile
+	url = https://github.com/makeplayhappy/WebGLFileSaverForUnity
