@@ -73,6 +73,9 @@ namespace GILES.Interface
 
 					List<Dropdown.OptionData> newDropList = new List<Dropdown.OptionData>();
 
+					Dropdown.OptionData firstItem = new Dropdown.OptionData("Select segmentation color"); 
+					newDropList.Add(firstItem);
+
 					foreach( KeyValuePair<string, Color32> kvp in results ){
 
 						Debug.Log("Key = " + kvp.Key );
