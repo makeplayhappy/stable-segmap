@@ -1,8 +1,12 @@
-﻿using System.Collections;
+﻿#define USING_RESOURCE_DB
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Linq;
+
 
 namespace GILES
 {
@@ -10,11 +14,19 @@ namespace GILES
     {
         public string name;
         public string path;
+        //public ResourceDB resourceDB;
         public List<pb_DirectoryMap> directories;
+#if USING_RESOURCE_DB
+        public List<ResourceItem> files;
+#else
         public List<string> files;
-
+#endif
         public pb_DirectoryMap(string name, string path)
         {
+            //resourceDB = new ResourceDB();
+            //resourceDB.FindInstance();
+            Debug.Log( "DirectoryMap for name:" + name + " path:" + path);
+
             this.name = name;
             this.path = path;
             map(path);
@@ -61,8 +73,30 @@ namespace GILES
 
         public List<string> getFileNames()
         {
+#if USING_RESOURCE_DB
+            //buidl filename list - !TODO - nothings using this afaik
+            return new List<string>();
+#else           
             return files;
+#endif
         }
+
+#if USING_RESOURCE_DB
+        public List<string> getFileMatch(ResourceItem.Type resourceType) 
+        {
+            List<string> matches = new List<string>();
+
+            foreach (ResourceItem file in files)
+            {
+                if (file.ResourcesType == resourceType )
+                {
+                    matches.Add(file.Name);
+                }
+            }
+            return matches;
+        }
+
+#else
 
         public List<string> getFileMatch(string pattern)
         {
@@ -77,6 +111,55 @@ namespace GILES
             }
             return matches;
         }
+     
+#endif
+
+#if USING_RESOURCE_DB
+        
+        //build directories & files Lists
+        public void map(string path)
+        {
+            directories = new List<pb_DirectoryMap>();
+            files = new List<ResourceItem>();
+
+            Debug.Log("DirectoryMap map( " + path + " )");
+            ResourceItem folderItem = ResourceDB.GetFolder(path);
+            //ResourceItem imagesFolder = ResourceDB.GetFolder("images");
+
+            if( folderItem != null){
+                Debug.Log("Found " + folderItem.Name + " type:" + folderItem.ResourcesType );
+
+                //directories.Add(new pb_DirectoryMap(folderItem.Name, path + "/" + folderName));
+
+                List<ResourceItem> childItems = folderItem.GetChilds("",ResourceItem.Type.Any).ToList();
+
+                Debug.Log("Found " + childItems.Count + " children");
+
+                foreach (ResourceItem childItem in childItems)
+                {
+
+                    Debug.Log("Checking " + childItem.Name + " rType:" + childItem.ResourcesType + " rPath:" + childItem.ResourcesPath);
+                    if ( childItem.ResourcesType == ResourceItem.Type.Folder )
+                    {
+                        //string folderName = fInfo.Name.Replace(".meta", "");
+                        directories.Add(new pb_DirectoryMap(childItem.Name, childItem.ResourcesPath));
+                    }
+                    else if( childItem.ResourcesType == ResourceItem.Type.Asset )
+                    {
+                        Debug.Log("!! Adding to files " + childItem.ResourcesPath);
+                        files.Add(childItem);
+
+                    }
+                }
+            }else{
+                Debug.Log("DirectoryMap map( " + path + " ) IS NULL");
+            }
+
+        }
+#else
+// this doesnt work in build / packed up environments
+// I guess the original expects you to be in control of the fiole system after install 
+// eg. for modding games where you load in the assets seperately
 
         public void map(string path)
         {
@@ -89,17 +172,19 @@ namespace GILES
                 if (isFolder(fInfo.Name))
                 {
                     string folderName = fInfo.Name.Replace(".meta", "");
+                    Debug.Log("!! Adding to folders " + path + "/" + folderName);
                     directories.Add(new pb_DirectoryMap(folderName, path + "/" + folderName));
                 }
                 else
                 {
+                    Debug.Log("!! Adding to files " + fInfo.Name);
                     files.Add(fInfo.Name);
 
                 }
             }
 
         }
-
+#endif
         bool isFolder(string fName)
         {
             int sIndex = fName.LastIndexOf(".meta");

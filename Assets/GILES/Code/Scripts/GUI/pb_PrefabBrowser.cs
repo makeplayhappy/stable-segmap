@@ -13,7 +13,8 @@ namespace GILES.Interface
 
 		void Start()
 		{
-            openFolder("");
+            openFolder(""); 
+            //openFolder(pb_Config.Resource_Folder_Paths[0]);
 			
 		}
 
@@ -114,10 +115,14 @@ namespace GILES.Interface
 
         public void openFolder (string path)
         {
+            
+            Debug.Log("openFolder " + path);
             clearBrowser();
             pb_DirectoryMap dMap = new pb_DirectoryMap(path, path);
             prefabs = new List<GameObject>();
-            List<string> fileNames = dMap.getFileMatch("\\.prefab");
+
+            //List<string> fileNames = dMap.getFileMatch("\\.prefab");
+            List<string> fileNames = dMap.getFileMatch( ResourceItem.Type.Asset );
 
             if (path == "")
                 createHomeIcons();

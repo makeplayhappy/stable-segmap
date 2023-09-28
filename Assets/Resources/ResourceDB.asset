@@ -1,0 +1,601 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47241af20f9b422f9a648512c7b0452, type: 3}
+  m_Name: ResourceDB
+  m_EditorClassIdentifier: 
+  items:
+  - name: Required
+    ext: 
+    path: 
+    type: 1
+    objectTypeName: 
+  - name: Font
+    ext: 
+    path: Required
+    type: 1
+    objectTypeName: 
+  - name: Inter
+    ext: 
+    path: Required/Font
+    type: 1
+    objectTypeName: 
+  - name: Inter-Regular
+    ext: ttf
+    path: Required/Font/Inter
+    type: 2
+    objectTypeName: UnityEngine.Font, UnityEngine.TextRenderingModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: OFL
+    ext: txt
+    path: Required/Font/Inter
+    type: 2
+    objectTypeName: UnityEngine.TextAsset, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: README
+    ext: txt
+    path: Required/Font/Inter
+    type: 2
+    objectTypeName: UnityEngine.TextAsset, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: archivo-black
+    ext: 
+    path: Required/Font
+    type: 1
+    objectTypeName: 
+  - name: ArchivoBlack
+    ext: otf
+    path: Required/Font/archivo-black
+    type: 2
+    objectTypeName: UnityEngine.Font, UnityEngine.TextRenderingModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: SIL Open Font License
+    ext: txt
+    path: Required/Font/archivo-black
+    type: 2
+    objectTypeName: UnityEngine.TextAsset, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: GUI
+    ext: 
+    path: Required
+    type: 1
+    objectTypeName: 
+  - name: Icons
+    ext: 
+    path: Required/GUI
+    type: 1
+    objectTypeName: 
+  - name: InsetWhite
+    ext: png
+    path: Required/GUI/Icons
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Resize
+    ext: png
+    path: Required/GUI/Icons
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Resize_Corner-Rounded
+    ext: png
+    path: Required/GUI/Icons
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Resize_TripleLines_Thin
+    ext: png
+    path: Required/GUI/Icons
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: check
+    ext: png
+    path: Required/GUI/Icons
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: TypeInspector
+    ext: 
+    path: Required/GUI
+    type: 1
+    objectTypeName: 
+  - name: Array Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Bool Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Color Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Enum Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Float Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Int Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Material Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Quaternion Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: String Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: UnityObject Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Vector2 Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Vector3 Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Vector4 Field
+    ext: prefab
+    path: Required/GUI/TypeInspector
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Gizmos
+    ext: 
+    path: Required
+    type: 1
+    objectTypeName: 
+  - name: Texture
+    ext: 
+    path: Required/Gizmos
+    type: 1
+    objectTypeName: 
+  - name: Icon_FlatWhite_AmmoBox
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_CheckBox-Checked
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_CheckMark
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_Delete
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_EnemySpawn
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_HealthPickup
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_LightBulb
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_Pistol
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_PlayerSpawn
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_Redo
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_Save
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_Settings
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_SunLight
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Icon_FlatWhite_Undo
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Light
+    ext: png
+    path: Required/Gizmos/Texture
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: AmmoPickup
+    ext: mat
+    path: Required/Gizmos
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Camera
+    ext: mat
+    path: Required/Gizmos
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: EnemySpawn
+    ext: mat
+    path: Required/Gizmos
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: HealthPickup
+    ext: mat
+    path: Required/Gizmos
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Light
+    ext: mat
+    path: Required/Gizmos
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: PlayerSpawn
+    ext: mat
+    path: Required/Gizmos
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: WeaponPickup
+    ext: mat
+    path: Required/Gizmos
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Handles
+    ext: 
+    path: Required
+    type: 1
+    objectTypeName: 
+  - name: Material
+    ext: 
+    path: Required/Handles
+    type: 1
+    objectTypeName: 
+  - name: GridMaterial
+    ext: mat
+    path: Required/Handles/Material
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: HandleOpaqueMaterial
+    ext: mat
+    path: Required/Handles/Material
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: HandleRotateMaterial
+    ext: mat
+    path: Required/Handles/Material
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: HandleTransparentMaterial
+    ext: mat
+    path: Required/Handles/Material
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Mesh
+    ext: 
+    path: Required/Handles
+    type: 1
+    objectTypeName: 
+  - name: ConeHardEdges
+    ext: asset
+    path: Required/Handles/Mesh
+    type: 2
+    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - name: ConeSoftEdges
+    ext: asset
+    path: Required/Handles/Mesh
+    type: 2
+    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - name: Cube
+    ext: asset
+    path: Required/Handles/Mesh
+    type: 2
+    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - name: Image
+    ext: 
+    path: Required
+    type: 1
+    objectTypeName: 
+  - name: MinusArrow
+    ext: png
+    path: Required/Image
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: MoveArrow
+    ext: png
+    path: Required/Image
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: OrbitView
+    ext: png
+    path: Required/Image
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: PanView
+    ext: png
+    path: Required/Image
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: PlusArrow
+    ext: png
+    path: Required/Image
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: SlideArrow
+    ext: png
+    path: Required/Image
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: White Background
+    ext: png
+    path: Required/Image
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: White
+    ext: png
+    path: Required/Image
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: ZoomView
+    ext: png
+    path: Required/Image
+    type: 2
+    objectTypeName: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Material
+    ext: 
+    path: Required
+    type: 1
+    objectTypeName: 
+  - name: Blur
+    ext: mat
+    path: Required/Material
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Highlight
+    ext: mat
+    path: Required/Material
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: UnlitVertexColor
+    ext: mat
+    path: Required/Material
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: UnlitVertexColorWavy
+    ext: mat
+    path: Required/Material
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Wireframe
+    ext: mat
+    path: Required/Material
+    type: 2
+    objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: LevelEditorPrefabs
+    ext: 
+    path: 
+    type: 1
+    objectTypeName: 
+  - name: Lights
+    ext: 
+    path: LevelEditorPrefabs
+    type: 1
+    objectTypeName: 
+  - name: Area Light
+    ext: prefab
+    path: LevelEditorPrefabs/Lights
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Directional Light
+    ext: prefab
+    path: LevelEditorPrefabs/Lights
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Point Light
+    ext: prefab
+    path: LevelEditorPrefabs/Lights
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Spot Light
+    ext: prefab
+    path: LevelEditorPrefabs/Lights
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: objects
+    ext: 
+    path: LevelEditorPrefabs
+    type: 1
+    objectTypeName: 
+  - name: Sphere
+    ext: prefab
+    path: LevelEditorPrefabs/objects
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Camera
+    ext: prefab
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Column
+    ext: prefab
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: ColumnMesh
+    ext: asset
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - name: Cube
+    ext: prefab
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: CubeMesh
+    ext: asset
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - name: Flat
+    ext: prefab
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: FlatMesh
+    ext: asset
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - name: Hole
+    ext: prefab
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: HoleMesh
+    ext: asset
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - name: L Shape
+    ext: prefab
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: L ShapeMesh
+    ext: asset
+    path: LevelEditorPrefabs
+    type: 2
+    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  - name: ResourceDB
+    ext: asset
+    path: 
+    type: 2
+    objectTypeName: ResourceDB, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  m_FileCount: 83
+  m_FolderCount: 17
+  UpdateAutomatically: 0
