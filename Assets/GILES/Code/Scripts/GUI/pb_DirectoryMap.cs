@@ -25,7 +25,7 @@ namespace GILES
         {
             //resourceDB = new ResourceDB();
             //resourceDB.FindInstance();
-            Debug.Log( "DirectoryMap for name:" + name + " path:" + path);
+            //Debug.Log( "DirectoryMap for name:" + name + " path:" + path);
 
             this.name = name;
             this.path = path;
@@ -122,23 +122,19 @@ namespace GILES
             directories = new List<pb_DirectoryMap>();
             files = new List<ResourceItem>();
 
-            Debug.Log("DirectoryMap map( " + path + " )");
+
             ResourceItem folderItem = ResourceDB.GetFolder(path);
             //ResourceItem imagesFolder = ResourceDB.GetFolder("images");
 
             if( folderItem != null){
-                Debug.Log("Found " + folderItem.Name + " type:" + folderItem.ResourcesType );
 
                 //directories.Add(new pb_DirectoryMap(folderItem.Name, path + "/" + folderName));
 
                 List<ResourceItem> childItems = folderItem.GetChilds("",ResourceItem.Type.Any).ToList();
 
-                Debug.Log("Found " + childItems.Count + " children");
-
                 foreach (ResourceItem childItem in childItems)
                 {
 
-                    Debug.Log("Checking " + childItem.Name + " rType:" + childItem.ResourcesType + " rPath:" + childItem.ResourcesPath);
                     if ( childItem.ResourcesType == ResourceItem.Type.Folder )
                     {
                         //string folderName = fInfo.Name.Replace(".meta", "");
@@ -146,13 +142,15 @@ namespace GILES
                     }
                     else if( childItem.ResourcesType == ResourceItem.Type.Asset )
                     {
-                        Debug.Log("!! Adding to files " + childItem.ResourcesPath);
+
                         files.Add(childItem);
 
                     }
                 }
+#if UNITY_EDITOR                
             }else{
                 Debug.Log("DirectoryMap map( " + path + " ) IS NULL");
+#endif
             }
 
         }
@@ -172,12 +170,12 @@ namespace GILES
                 if (isFolder(fInfo.Name))
                 {
                     string folderName = fInfo.Name.Replace(".meta", "");
-                    Debug.Log("!! Adding to folders " + path + "/" + folderName);
+                    //Debug.Log("!! Adding to folders " + path + "/" + folderName);
                     directories.Add(new pb_DirectoryMap(folderName, path + "/" + folderName));
                 }
                 else
                 {
-                    Debug.Log("!! Adding to files " + fInfo.Name);
+                    //Debug.Log("!! Adding to files " + fInfo.Name);
                     files.Add(fInfo.Name);
 
                 }

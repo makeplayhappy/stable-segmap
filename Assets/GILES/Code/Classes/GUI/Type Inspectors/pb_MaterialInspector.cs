@@ -55,9 +55,9 @@ namespace GILES.Interface
 		public void OnDropDownValueChanged( Dropdown change ){
 
         	string selectedName = change.options[change.value].text;
-			Debug.Log("dropdown set to " + selectedName );
+
 			string matName = SegmentColors.CleanName( selectedName );
-			Debug.Log("set matrial to " + matName);
+
 			Material newMat = matList.GetMaterialByName(matName);
 			SetValue(newMat);
 
@@ -78,7 +78,7 @@ namespace GILES.Interface
 
 					foreach( KeyValuePair<string, Color32> kvp in results ){
 
-						Debug.Log("Key = " + kvp.Key );
+
 						Texture2D dtexture = new Texture2D(1,1); // creating texture with 1 pixel
  						dtexture.SetPixel(0, 0, (Color)kvp.Value); // setting to this pixel some color
  						dtexture.Apply();
@@ -93,15 +93,6 @@ namespace GILES.Interface
 
 					dropdown.AddOptions(newDropList);
 					
-			
-
-
-//					Debug.Log("Found " + results.Count + " results");
-//					foreach( KeyValuePair<string, Color32> kvp in results ){
-//						Debug.Log("Key = " + kvp.Key );
-//					}
-
-				//build a clickable list
 				}
 
 

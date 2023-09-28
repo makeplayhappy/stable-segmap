@@ -14,7 +14,6 @@ namespace GILES.Interface
 		void Start()
 		{
             openFolder(""); 
-            //openFolder(pb_Config.Resource_Folder_Paths[0]);
 			
 		}
 
@@ -35,15 +34,15 @@ namespace GILES.Interface
         private void createHomeIcons()
         {
             
-            Debug.Log("createHomeIcons");
+            //Debug.Log("createHomeIcons");
             foreach (string folder in pb_Config.Resource_Folder_Paths)
             {
-                Debug.Log("pb_Config.Resource_Folder_Paths: " + folder);
+
                 createFolderButton("", folder);
             }
             foreach (string bundle in pb_Config.AssetBundle_Names)
             {
-                Debug.Log("pb_Config.AssetBundle_Names: " + bundle);
+                //Debug.Log("pb_Config.AssetBundle_Names: " + bundle);
                 createAssetBundleButton(bundle);
             }
         }

@@ -24,13 +24,11 @@ namespace GILES.Interface
 			pb_TypeInspector rotation_inspector = pb_InspectorResolver.GetInspector(typeof(Vector3));
 			pb_TypeInspector scale_inspector 	= pb_InspectorResolver.GetInspector(typeof(Vector3));
 
-			pb_TypeInspector material_inspector 	= pb_InspectorResolver.GetInspector(typeof(Material));
+			
 
 			position_inspector.Initialize("Position", UpdatePosition, OnSetPosition);
 			rotation_inspector.Initialize("Rotation", UpdateRotation, OnSetRotation);
 			scale_inspector.Initialize("Scale", UpdateScale, OnSetScale);
-
-			
 
 			position_inspector.onValueBeginChange = () => { Undo.RegisterState( new UndoTransform(_transform), "Set Position: " + _transform.position.ToString("G") ); };
 			rotation_inspector.onValueBeginChange = () => { Undo.RegisterState( new UndoTransform(_transform), "Set Rotation: " + _transform.localRotation.eulerAngles.ToString("G")); };
@@ -42,7 +40,9 @@ namespace GILES.Interface
 
 
 			if( _renderer != null){
-				Debug.Log("Initialising Material Inspector");
+
+				pb_TypeInspector material_inspector 	= pb_InspectorResolver.GetInspector(typeof(Material));
+
 				material_inspector.Initialize("Material", UpdateMaterial, OnSetMaterial);
 				//material_inspector.onValueBeginChange = () => { Undo.RegisterState( new UndoTransform(_transform), "Set Scale: " + _transform.localScale.ToString("G") ); };
 				material_inspector.transform.SetParent(transform);

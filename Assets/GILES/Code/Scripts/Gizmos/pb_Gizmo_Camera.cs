@@ -36,6 +36,8 @@ namespace GILES
 
 		public override void Update()
 		{
+			
+			
 			base.Update();
 
 			if(!isSelected)
@@ -44,12 +46,18 @@ namespace GILES
 			if(camMesh == null)
 				return;
 
+			if( trs == null){
+				trs = transform;
+			}
 
 			gizmoMatrix.SetTRS(trs.position, trs.localRotation, Vector3.one);
 
-
-			for(int i = 0; i < camMesh.subMeshCount; i++)
-				Graphics.DrawMesh(camMesh, gizmoMatrix, camMaterial, 0, null, i, null, false, false);
+			//Debug.Log("drawing cam mesh, with sub meshes:" + camMesh.subMeshCount);
+			if( camMesh != null){
+				for(int i = 0; i < camMesh.subMeshCount; i++){
+					Graphics.DrawMesh(camMesh, gizmoMatrix, camMaterial, 0, null, i, null, false, false);
+				}
+			}
 		}
 
 		private void RebuildGizmos()
