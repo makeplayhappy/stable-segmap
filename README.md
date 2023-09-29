@@ -2,7 +2,7 @@
 
 This is a modified version of Giles with the aim of publishing a web runtime editor for building 3d segmentations for controlnet. Eventually depth maps and possibly normal maps if anyone want to add that in!
  
-![segmentation-colors-for-controlnet](docs/color150-segmentation-colors-for-controlnet-v0.webp)
+![segmentation-colors-for-controlnet](notes/color150-segmentation-colors-for-controlnet-v0.webp)
 
 
 ### A Runtime Level Editor for Unity3D
