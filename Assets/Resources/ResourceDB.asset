@@ -479,123 +479,100 @@ MonoBehaviour:
     type: 2
     objectTypeName: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  - name: LevelEditorPrefabs
+  - name: Objects
     ext: 
     path: 
     type: 1
     objectTypeName: 
-  - name: Lights
+  - name: Car
+    ext: prefab
+    path: Objects
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Man
+    ext: prefab
+    path: Objects
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Tree
+    ext: prefab
+    path: Objects
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Woman
+    ext: prefab
+    path: Objects
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Primitives
     ext: 
-    path: LevelEditorPrefabs
+    path: 
     type: 1
     objectTypeName: 
-  - name: Area Light
+  - name: Capsule
     ext: prefab
-    path: LevelEditorPrefabs/Lights
+    path: Primitives
     type: 2
     objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  - name: Directional Light
+  - name: Cone
     ext: prefab
-    path: LevelEditorPrefabs/Lights
+    path: Primitives
     type: 2
     objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  - name: Point Light
-    ext: prefab
-    path: LevelEditorPrefabs/Lights
-    type: 2
-    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - name: Spot Light
-    ext: prefab
-    path: LevelEditorPrefabs/Lights
-    type: 2
-    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - name: objects
-    ext: 
-    path: LevelEditorPrefabs
-    type: 1
-    objectTypeName: 
-  - name: Sphere
-    ext: prefab
-    path: LevelEditorPrefabs/objects
-    type: 2
-    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - name: Camera
-    ext: prefab
-    path: LevelEditorPrefabs
-    type: 2
-    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - name: Column
-    ext: prefab
-    path: LevelEditorPrefabs
-    type: 2
-    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - name: ColumnMesh
-    ext: asset
-    path: LevelEditorPrefabs
-    type: 2
-    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
   - name: Cube
     ext: prefab
-    path: LevelEditorPrefabs
+    path: Primitives
     type: 2
     objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  - name: CubeMesh
-    ext: asset
-    path: LevelEditorPrefabs
-    type: 2
-    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  - name: Flat
+  - name: Cylinder
     ext: prefab
-    path: LevelEditorPrefabs
+    path: Primitives
     type: 2
     objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  - name: FlatMesh
-    ext: asset
-    path: LevelEditorPrefabs
-    type: 2
-    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  - name: Hole
+  - name: Hemi Sphere
     ext: prefab
-    path: LevelEditorPrefabs
+    path: Primitives
     type: 2
     objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  - name: HoleMesh
-    ext: asset
-    path: LevelEditorPrefabs
-    type: 2
-    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  - name: L Shape
+  - name: Sphere
     ext: prefab
-    path: LevelEditorPrefabs
+    path: Primitives
     type: 2
     objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  - name: L ShapeMesh
-    ext: asset
-    path: LevelEditorPrefabs
+  - name: Torus Fat
+    ext: prefab
+    path: Primitives
     type: 2
-    objectTypeName: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Torus Medium
+    ext: prefab
+    path: Primitives
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - name: Torus Thin
+    ext: prefab
+    path: Primitives
+    type: 2
+    objectTypeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   - name: ResourceDB
     ext: asset
     path: 
     type: 2
     objectTypeName: ResourceDB, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  m_FileCount: 83
-  m_FolderCount: 17
+  m_FileCount: 80
+  m_FolderCount: 16
   UpdateAutomatically: 0
