@@ -30,7 +30,7 @@ namespace GILES.Interface
                 GameObject child = go.AddChild();
                 child.name = "Item Folder";
                 Text text = child.AddComponent<Text>();
-                text.maskable = false;
+                text.maskable = true;
                 text.font = pb_GUIUtility.DefaultFont();
                 text.alignment = TextAnchor.LowerCenter;
                 text.text = asset.name;

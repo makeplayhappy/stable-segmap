@@ -7,5 +7,6 @@ public class SnapshotCamera : MonoBehaviour
     // Start is called before the first frame update
 
     public Vector2 outputSize;
+    public RenderTexture rt;
 
 }

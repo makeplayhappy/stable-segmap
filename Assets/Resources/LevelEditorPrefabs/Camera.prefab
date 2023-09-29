@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outputSize: {x: 512, y: 512}
+  rt: {fileID: 0}
 --- !u!114 &11414774
 MonoBehaviour:
   m_ObjectHideFlags: 0

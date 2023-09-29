@@ -42,7 +42,7 @@ namespace GILES.Interface
             {
 
                 Text text = description.AddComponent<Text>();
-                text.maskable = false;
+                text.maskable = true;
                 text.font = pb_GUIUtility.DefaultFont();
                 text.alignment = TextAnchor.MiddleCenter;
                 text.text = asset.name;

@@ -134,12 +134,12 @@ namespace GILES.Interface
 			{
 				previewComponent = description.AddComponent<RawImage>();
 				previewComponent.texture = previewImage;
-				previewComponent.maskable = false;
+				previewComponent.maskable = true;
 			}
 			else
 			{
 				Text text = description.AddComponent<Text>();
-				text.maskable = false;
+				text.maskable = true;
 				text.font = pb_GUIUtility.DefaultFont();
 				text.alignment = TextAnchor.MiddleCenter;
 				text.text = asset.name;

@@ -14,13 +14,13 @@ namespace GILES
 	{
 
 		public override string tooltip { get { return "Grab png snapshot"; } }
-
         private byte[] file = null;
 
         private Camera snapCam;
         private Camera mainCam;
 
         private Vector2 outputSize = new Vector2(512f,512f); 
+        private RenderTexture rt;
 
         private static string filename = "Screenshots";
         
@@ -39,8 +39,7 @@ namespace GILES
 
                 break;
                 default:
-
-
+                    okayToSnapshot = true;
                 break;
             }
 
@@ -62,10 +61,17 @@ namespace GILES
                             SnapshotCamera camSettings = cameraGO.GetComponent<SnapshotCamera>();
                             if(camSettings != null){
                                 outputSize = camSettings.outputSize;
+                                rt = camSettings.rt;
                             }
                         }
                     }
                 }
+
+                if( rt == null){
+                    Debug.Log("Couldnt find a snapshot texture");
+                    return;
+                }
+                
                 if( snapCam != null ){
 
                     StartCoroutine( GrabPNG() );
@@ -81,7 +87,9 @@ namespace GILES
 
 
         IEnumerator GrabPNG() {
-            mainCam.enabled = false;
+
+///            mainCam.enabled = false;
+
             // Only read the screen after all rendering is complete
             yield return new WaitForEndOfFrame();
             // Create a texture the size of the screen, RGB24 format
@@ -92,12 +100,21 @@ namespace GILES
             int height = Screen.height;
 */
             Texture2D tex = new Texture2D(width, height, TextureFormat.RGB24, false);
+
+            //Texture2D tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
+            //tex.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
+            RenderTexture.active = rt;
+        
+        
+
             // Read screen contents into the texture
             tex.ReadPixels(new Rect(0, 0, width, height), 0, 0);
             tex.Apply();
             // Encode texture into JPG
             file = ImageConversion.EncodeToPNG(tex);
             Destroy(tex);
+
+            RenderTexture.active = null;
 
             if( Application.platform == RuntimePlatform.WebGLPlayer ){ 
 
@@ -113,7 +130,7 @@ namespace GILES
             }
 
 
-            mainCam.enabled = true;
+///            mainCam.enabled = true;
 
         }
 

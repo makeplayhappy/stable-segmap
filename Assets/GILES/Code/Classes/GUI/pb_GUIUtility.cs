@@ -94,7 +94,7 @@ namespace GILES.Interface
 			GameObject go = new GameObject();
 			go.name = "Label Field";
 			Text field = go.AddComponent<Text>();
-			field.maskable = false;
+			field.maskable = true;
 			string temp = text.Replace("UnityEngine.","");
 			field.text = temp; //This removes the UnityEngine. Prefix from the Inspector.
 			//field.text = text;
