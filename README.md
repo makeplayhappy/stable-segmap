@@ -1,9 +1,16 @@
-# Giles 2022 LTS
+# Stable SegMap
 
-This is a modified version of Giles with the aim of publishing a web runtime editor for building 3d segmentations for controlnet. Eventually depth maps and possibly normal maps if anyone want to add that in!
+This is a 3d application geared towards generating control net maps. Eventually depth maps and possibly normal maps if anyone want to add that in!
+
+This is a modified fork of [Giles](https://github.com/Unity-Technologies/giles) with the aim of publishing a web runtime editor for building 3d segmentations for controlnet. 
+Authored using Unity 2022 LTS
  
 ![segmentation-colors-for-controlnet](notes/color150-segmentation-colors-for-controlnet-v0.webp)
 
+
+
+
+# Original README
 
 ### A Runtime Level Editor for Unity3D
 

@@ -204,8 +204,9 @@ namespace GILES
 			
 			foreach(Transform t in transform)
 			{
-				if(!t.gameObject.activeSelf)
+				if(t.gameObject.activeSelf == false || t.gameObject.tag == "Unselectable"){
 					continue;
+				}
 
 				children.Add(t.gameObject);
 				children.AddRange( GetChildren(t) );
