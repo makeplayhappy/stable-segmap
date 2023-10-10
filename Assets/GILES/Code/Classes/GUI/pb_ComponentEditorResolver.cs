@@ -19,7 +19,8 @@ namespace GILES.Interface
 		{
 			{ typeof(Transform), typeof(pb_TransformEditor) },
 			{ typeof(MeshRenderer), typeof(pb_MeshRendererEditor) },
-			{ typeof(Camera), typeof(pb_CameraEditor) }
+			{ typeof(Camera), typeof(pb_CameraEditor) },
+			{ typeof(PoseChanger), typeof(pb_PoseChangerEditor) }
 		};
 
 		/**

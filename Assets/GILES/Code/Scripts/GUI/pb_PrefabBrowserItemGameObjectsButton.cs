@@ -77,9 +77,9 @@ namespace GILES.Interface
             float hit = 0f;
 
             if (plane.Raycast(ray, out hit))
-                go = (GameObject)pb_Scene.Instantiate(asset, pb_Snap.Snap(ray.GetPoint(hit), .25f), Quaternion.identity);
+                go = (GameObject)pb_Scene.Instantiate(asset, pb_Snap.Snap(ray.GetPoint(hit), .25f), asset.transform.rotation);
             else
-                go = (GameObject)pb_Scene.Instantiate(asset, pb_Snap.Snap(ray.GetPoint(10f), .25f), Quaternion.identity);
+                go = (GameObject)pb_Scene.Instantiate(asset, pb_Snap.Snap(ray.GetPoint(10f), .25f), asset.transform.rotation);
 
             Undo.RegisterStates(new List<IUndo>() { new UndoSelection(), new UndoInstantiate(go) }, "Create new object");
 

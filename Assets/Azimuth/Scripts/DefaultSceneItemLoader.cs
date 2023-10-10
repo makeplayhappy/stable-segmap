@@ -28,7 +28,7 @@ public class DefaultSceneItemLoader : MonoBehaviour	{
         }
 
         if( snapshotCam != null){
-            GameObject snapCameraGO = (GameObject)pb_Scene.Instantiate(snapshotCam, Vector3.zero, Quaternion.identity);
+            GameObject snapCameraGO = (GameObject)pb_Scene.Instantiate(snapshotCam, snapshotCam.transform.position, snapshotCam.transform.rotation);
             if( snapCameraGO.tag != "Snapshot"){
                 snapCameraGO.tag = "Snapshot";
             }

@@ -112,6 +112,15 @@ namespace GILES.Interface
 		}
 
 		/**
+		 * Type inspector initializer when parent object is an array with stored target.
+		 */
+		public void Initialize(string name, object target, UpdateValueWithIndex getStoredValueDelegate, Callback<int, object> onValueChangedDelegate)
+		{
+			this.target = target;
+			Initialize(name,  null, null, getStoredValueDelegate, onValueChangedDelegate);
+		}
+
+		/**
 		 * Full initializer with parameters for array elements and a type param to force the element type (which can be necessary in the 
 		 * event that UpdateValue returns null and no declaring type is found).
 		 */
